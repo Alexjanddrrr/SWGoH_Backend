@@ -1,6 +1,5 @@
 from peewee import *
 
-
 db = SqliteDatabase('users_base')
 
 
@@ -23,4 +22,19 @@ class Player(BaseModel):
 
     """
     nickname = CharField()
-    ally_code = IntegerField(primary_key=True)
+    ally_code = CharField(primary_key=True)
+
+
+class Characters(BaseModel):
+    """
+    Все персонажи игрока
+
+    :param
+        ally_id: Код союзника пользователя
+        unit: Персонаж
+        relic: Уровень реликвий
+
+    """
+    ally_id = ForeignKeyField(Player, related_name='allycode')
+    unit = CharField()
+    relic = CharField()
