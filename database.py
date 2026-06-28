@@ -7,6 +7,7 @@ class BaseModel(Model):
     """
     Базовый класс для всех наследников для работы с базой данных,
     наследник от Model
+
     """
     class Meta:
         database = db
@@ -38,3 +39,15 @@ class Characters(BaseModel):
     ally_id = ForeignKeyField(Player, related_name='allycode')
     unit = CharField()
     relic = CharField()
+
+class Fleet(BaseModel):
+    """
+    Все корабли игрока
+
+    :param
+        ally_id: Код союзника пользователя
+        ship: Корабль
+
+    """
+    ally_id = ForeignKeyField(Player, related_name='allycode')
+    ship = CharField()
