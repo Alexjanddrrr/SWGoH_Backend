@@ -9,14 +9,13 @@ all_units = Blueprint('units', __name__)
 @all_units.route('/units/<string:ally_code>/', methods=['GET'])
 def units_info(ally_code: str):
     """
-    Регистрирует игрока и его склад, если игрок уже зарегистрирован, то возвращает
+    Регистрирует игрока и его склад. Если игрок уже зарегистрирован, то возвращает
     склад игрока
 
     :param
         ally_code: Код союзника
     :return: Если игрок уже есть в базе, то возвращает список юнитов с уровнем реликвий.
     Если нет, то регистрирует
-
     """
     url = 'COMLINK_URL/player'
     output_dict = {
