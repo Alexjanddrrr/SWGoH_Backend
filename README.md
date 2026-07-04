@@ -39,9 +39,9 @@ Backend-сервис для Telegram-бота на Flask.
 
 Должно выглядеть:
 
-\`\`\`python
+```python
 url = 'http://192.168.1.10:8000/player'
-\`\`\`
+```
 
 ## Сборка и запуск через Docker
 
