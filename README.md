@@ -1,8 +1,8 @@
-# Telegram Bot Backend
+# SWGOH Backend
 
 > ⚠️ **Статус: в разработке.** Функциональность и API могут меняться.
 
-Backend-сервис для Telegram-бота на Flask.
+Backend-сервис на Flask.
 
 ## Что делает
 
